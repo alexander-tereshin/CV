@@ -1,5 +1,7 @@
 # Alexander Tereshin CV
-This repository contains CV RU version
+This repository contains CV RU version      
 
-![cv](https://user-images.githubusercontent.com/107271811/216275738-f2448afc-b0e5-4dba-8711-36c51ebf0c54.png)
+![Alexander Tereshin CV RUS](https://user-images.githubusercontent.com/107271811/219350660-2f59cc03-5ef5-4b9c-a253-67c22c3df792.jpg)
+
+
 
