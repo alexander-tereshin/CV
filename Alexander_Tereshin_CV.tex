@@ -1,0 +1,216 @@
+%-------------------------
+% Resume in Latex
+% Author : Alexander Tershin
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \normalfont{#2} \\
+      \normalfont{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge Alexander Tereshin} \\ \vspace{8pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:+7(977)957-81-01}{+7(977)957-81-01}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:alexandr.tereshin@outlook.com}{alexandr.tereshin@outlook.com}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/alex-tereshin}{alex-tereshin}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/alexander-tereshin}{alexander-tereshin}
+    $|$
+    \faMapMarker \hspace{.5pt} Moscow, Russia
+\end{center}
+
+% \vspace{-4pt}
+% \textit
+% {My professional journey began in the aviation industry, 
+% where I rose from a mechanic to a leading engineer and eventually 
+% a Production Manager. As a Lead Engineer, I leveraged analytics to 
+% optimize maintenance processes, driving significant efficiency gains. 
+% Recognizing the transformative potential of data analysis, 
+% I transitioned into the dynamic field of Data Science, where I now aim 
+% to apply my diverse skill set and analytical mindset to excel as a 
+% Machine Learning Engineer.}
+
+
+\vspace{-4pt}
+\textit
+{Data Analyst with expertise in experimentation and possessing a product sense. 
+Specializing in identifying growth opportunities, I have expertise in constructing analytics infrastructure and implementing automation for operational efficiency. 
+My skill set includes Machine Learning, which enhances my capabilities in data analysis.}
+
+%----------- SKILLS -----------
+
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Languages:}{ Python, SQL, R} \\ \vspace*{3pt}
+        \textbf{Python Libraries:}{ Pandas, NumPy, Sklearn, PyTorch, FastApi, Pytest, CatBoost, XGBoost, LightGBM, Streamlit} \\ \vspace*{3pt}
+        \textbf{DevOps and Workflow:}{ Linux, Git, Docker, GitLab CI/CD, Airflow, MLFlow, S3} \\ \vspace*{3pt}
+        \textbf{Web Analytics Tools::}{ Google Analytics, Yandex.Metrika, Google Tag Manager (GTM), HTML/CSS} \\ \vspace*{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+
+
+%----------- EXPERIENCE -----------
+
+\section{Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Product Analyst}{Jun 2023 -- Present}
+      {VseInstrumenti.ru}{Leading DIY e-commerce company in the CIS}
+        \resumeItemListStart
+            \resumeItem{Run analytics for three core products in a large e-commerce platform with 12+ million MAU;}
+            \resumeItem{Led a series of 40+ online A/B tests across three product teams from MDE analysis to modelling potential uplift effects (Stratification, Delta Method, Linearization, Bootstrap, and Bucketing),
+            resulting in 30+ new features, contributing to a \$25K increase in monthly revenue;}
+            \resumeItem{Achieved an 80\% reduction in data analysis time for ad-hoc requests by implementing reusable ETL 
+            components using Python, Apache Airflow and Docker, which facilitated the creation of a Google Data Studio dashboard.
+            The dashboard showcased critical metrics including website performance, cohort analysis, shopping cart activity, 
+            order checkout methods and payment processes. This pipeline served as a reporting framework for the all product teams;}
+            \resumeItem{Build series of ML and SARIMAX time series forecasting models with 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
+            \resumeItem{Configured GTM to ensure precise data tracking and reporting;}
+        \resumeItemListEnd
+
+    \resumeSubheading
+    {Data Analyst}{Jan 2023 -- Jun 2023}
+    {Sportmaster}{Largest sports and outdoor retailer in Russia}
+      \resumeItemListStart
+          \resumeItem{Developed an time series forecasting model using statistical methods (SARIMA) to predict inventory losses in offline retail stores;}
+          \resumeItem{Implemented a Power BI dashboard using multiple data processing pipelines to visualize potential risks related to employee safety violations in distribution centers;}
+          \resumeItem{Developed a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. 
+          This model utilized various factors such as employee demographics, working hours, job roles, and environmental conditions to predict the likelihood of accidents occurring;}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Higher School of Economic}{Sep 2023 -- Present}
+    {Master's degree in Machine Learning and High Load Systems}{}
+    \resumeSubheading
+    {Saint Petersburg State University of Civil Aviation}{Sep 2016 -- Jun 2021}
+    {Bachelor's degree in Maintenance of Aircraft and Engines}{}
+  \resumeSubHeadingListEnd
+
+
+%----------- PROJECTS -----------
+
+\section{Projects}
+    \vspace{3pt}
+    \resumeSubHeadingListStart
+      
+      \resumeProjectHeading
+        {\textbf{Optimization of Expected Return from a Stock Portfolio} $|$ \emph{\href{https://github.com/alexander-tereshin/Portfolio_Optimisation}{\color{blue}GitHub}}}{}
+        \begin{multicols}{2}
+        \resumeItemListStart
+            \resumeItem{Developed parsers to extract financial data and news data;}
+            \resumeItem{Utilized PyTorch for generating news title embeddings;}
+            \resumeItem{Trained CatBoost model to predict expected return;}
+            \resumeItem{Developed FastAPI for the backend API;}
+            \resumeItem{Used the aiogram framework for building the Telegram bot interface;}
+            \resumeItem{Deployed the app using Docker;}
+          \resumeItemListEnd
+        \end{multicols}
+    \resumeSubHeadingListEnd
+
+
+\end{document}
