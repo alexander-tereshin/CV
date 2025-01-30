@@ -112,23 +112,12 @@
     \faMapMarker \hspace{.5pt} Moscow, Russia
 \end{center}
 
+
 % \vspace{-4pt}
 % \textit
-% {My professional journey began in the aviation industry, 
-% where I rose from a mechanic to a leading engineer and eventually 
-% a Production Manager. As a Lead Engineer, I leveraged analytics to 
-% optimize maintenance processes, driving significant efficiency gains. 
-% Recognizing the transformative potential of data analysis, 
-% I transitioned into the dynamic field of Data Science, where I now aim 
-% to apply my diverse skill set and analytical mindset to excel as a 
-% Machine Learning Engineer.}
-
-
-\vspace{-4pt}
-\textit
-{Data Analyst with expertise in experimentation and possessing a product sense. 
-Specializing in identifying growth opportunities, I have expertise in constructing analytics infrastructure and implementing automation for operational efficiency. 
-My skill set includes Machine Learning, which enhances my capabilities in data analysis.}
+% {Data Analyst with expertise in experimentation and possessing a product sense. 
+% Specializing in identifying growth opportunities, I have expertise in constructing analytics infrastructure and implementing automation for operational efficiency. 
+% My skill set includes Machine Learning, which enhances my capabilities in data analysis.}
 
 %----------- SKILLS -----------
 
@@ -136,10 +125,9 @@ My skill set includes Machine Learning, which enhances my capabilities in data a
   \vspace{2pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Languages:}{ Python, SQL, R} \\ \vspace*{3pt}
-        \textbf{Python Libraries:}{ Pandas, NumPy, Sklearn, PyTorch, FastApi, Pytest, CatBoost, XGBoost, LightGBM, Streamlit} \\ \vspace*{3pt}
-        \textbf{DevOps and Workflow:}{ Linux, Git, Docker, GitLab CI/CD, Airflow, MLFlow, S3} \\ \vspace*{3pt}
-        \textbf{Web Analytics Tools::}{ Google Analytics, Yandex.Metrika, Google Tag Manager (GTM), HTML/CSS} \\ \vspace*{3pt}
+        \textbf{Languages:}{ Python, Bash, SQL, R, LaTeX} \\ \vspace*{3pt}
+        \textbf{Python Libraries:}{ PyTorch, PySpark, FastApi, Pytest, asyncio, CatBoost, XGBoost, LightGBM, Scikit-learn} \\ \vspace*{3pt}
+        \textbf{DevOps and Workflow:}{ Linux, Git, Hadoop, Spark, Docker, Apache Airflow, MLFlow, S3, CI/CD, Redis, Ansible} \\ \vspace*{3pt}
     }}
   \resumeSubHeadingListEnd
 
@@ -152,30 +140,35 @@ My skill set includes Machine Learning, which enhances my capabilities in data a
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Product Analyst}{Jun 2023 -- Present}
+      {Machine Learning Engineer}{Jun 2024 -- Present}
+      {Raiffeisenbank}{One of the top 10 most profitable banks in Russia}
+        \resumeItemListStart
+            \resumeItem{Designed and deployed 4 end-to-end batch prediction pipelines for binary classification, automating model retraining, inference workflows, and monitoring. Implemented statistical drift detection and data quality rules;}
+            \resumeItem{Developed an asynchronous prompt-based solution, utilizing API inference of deployed LLMs for text summarization and classification, accelerating internal comment labeling workflows by 10x;}
+            \resumeItem{Built an MVP for a RAG-based HR question-answering system with hybrid retrieval (BM25 + semantic embeddings) and structured Chain of Thought outputs;}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Analyst}{Jun 2023 -- Feb 2024}
       {VseInstrumenti.ru}{Leading DIY e-commerce company in the CIS}
         \resumeItemListStart
             \resumeItem{Run analytics for three core products in a large e-commerce platform with 12+ million MAU;}
             \resumeItem{Led a series of 40+ online A/B tests across three product teams from MDE analysis to modelling potential uplift effects (Stratification, Delta Method, Linearization, Bootstrap, and Bucketing),
             resulting in 30+ new features, contributing to a \$25K increase in monthly revenue;}
             \resumeItem{Achieved an 80\% reduction in data analysis time for ad-hoc requests by implementing reusable ETL 
-            components using Python, Apache Airflow and Docker, which facilitated the creation of a Google Data Studio dashboard.
-            The dashboard showcased critical metrics including website performance, cohort analysis, shopping cart activity, 
-            order checkout methods and payment processes. This pipeline served as a reporting framework for the all product teams;}
-            \resumeItem{Build series of ML and SARIMAX time series forecasting models with 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
-            \resumeItem{Configured GTM to ensure precise data tracking and reporting;}
+            components using Python, Apache Airflow and Docker, which facilitated the creation of a Google Data Studio dashboard. This pipeline served as a reporting framework for the all product teams;}
+            \resumeItem{Build series of ML and SARIMAX time series forecasting models with average 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
         \resumeItemListEnd
 
     \resumeSubheading
     {Data Analyst}{Jan 2023 -- Jun 2023}
-    {Sportmaster}{Largest sports and outdoor retailer in Russia}
+    {Sportmaster}{The largest sports and outdoor retailer in Russia}
       \resumeItemListStart
           \resumeItem{Developed an time series forecasting model using statistical methods (SARIMA) to predict inventory losses in offline retail stores;}
           \resumeItem{Implemented a Power BI dashboard using multiple data processing pipelines to visualize potential risks related to employee safety violations in distribution centers;}
-          \resumeItem{Developed a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. 
+          \resumeItem{Used a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. 
           This model utilized various factors such as employee demographics, working hours, job roles, and environmental conditions to predict the likelihood of accidents occurring;}
       \resumeItemListEnd
-    
   \resumeSubHeadingListEnd
 
 %----------- EDUCATION -----------
@@ -199,18 +192,10 @@ My skill set includes Machine Learning, which enhances my capabilities in data a
     \resumeSubHeadingListStart
       
       \resumeProjectHeading
-        {\textbf{Optimization of Expected Return from a Stock Portfolio} $|$ \emph{\href{https://github.com/alexander-tereshin/Portfolio_Optimisation}{\color{blue}GitHub}}}{}
-        \begin{multicols}{2}
+        {\textbf{S\&P 500 Portfolio Optimization Service} $|$ \emph{\href{https://github.com/alexander-tereshin/Portfolio_Optimisation}{\color{blue}GitHub}}}{}
         \resumeItemListStart
-            \resumeItem{Developed parsers to extract financial data and news data;}
-            \resumeItem{Utilized PyTorch for generating news title embeddings;}
-            \resumeItem{Trained CatBoost model to predict expected return;}
-            \resumeItem{Developed FastAPI for the backend API;}
-            \resumeItem{Used the aiogram framework for building the Telegram bot interface;}
-            \resumeItem{Deployed the app using Docker;}
+            \resumeItem{Developed a Dockerized stock prediction service using asynchronous scrapers, Sentence-Transformers for news sentiment analysis, and CatBoost for return forecasting, deployed via FastAPI with a Telegram bot for real-time rebalancing of stocks portfolio;}
           \resumeItemListEnd
-        \end{multicols}
     \resumeSubHeadingListEnd
-
 
 \end{document}
