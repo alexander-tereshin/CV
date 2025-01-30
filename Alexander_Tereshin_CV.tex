@@ -1,9 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Alexander Tershin
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -22,25 +16,13 @@
 \usepackage{multicol}
 \input{glyphtounicode}
 
-%---------- FONT OPTIONS ----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
+\setlength{\footskip}{5pt}
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -53,36 +35,28 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-1pt}}
-  }
-}
+    {#1}
+}}
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \normalfont{#2} \\
+      \textbf{#1} & \normalfont{#2} \\[1pt]
       \normalfont{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{1pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -97,9 +71,9 @@
 \begin{document}
 
 %---------- HEADING ----------
-
 \begin{center}
-    \textbf{\Huge Alexander Tereshin} \\ \vspace{8pt}
+    \textbf{\Huge Alexander Tereshin} \\ \vspace{5pt}
+    \textbf{\Large Machine Learning Engineer} \\ \vspace{5pt}
     \small
     \faMobile \hspace{.5pt} \href{tel:+7(977)957-81-01}{+7(977)957-81-01}
     $|$
@@ -108,74 +82,49 @@
     \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/alex-tereshin}{alex-tereshin}
     $|$
     \faGithub \hspace{.5pt} \href{https://github.com/alexander-tereshin}{alexander-tereshin}
-    $|$
-    \faMapMarker \hspace{.5pt} Moscow, Russia
+    % $|$
+    % \faMapMarker \hspace{.5pt} Moscow, Russia
 \end{center}
+\vspace{-15pt}
+
+%----------- SUMMARY -----------
 
 % \vspace{-4pt}
 % \textit
-% {My professional journey began in the aviation industry, 
-% where I rose from a mechanic to a leading engineer and eventually 
-% a Production Manager. As a Lead Engineer, I leveraged analytics to 
-% optimize maintenance processes, driving significant efficiency gains. 
-% Recognizing the transformative potential of data analysis, 
-% I transitioned into the dynamic field of Data Science, where I now aim 
-% to apply my diverse skill set and analytical mindset to excel as a 
-% Machine Learning Engineer.}
-
-
-\vspace{-4pt}
-\textit
-{Data Analyst with expertise in experimentation and possessing a product sense. 
-Specializing in identifying growth opportunities, I have expertise in constructing analytics infrastructure and implementing automation for operational efficiency. 
-My skill set includes Machine Learning, which enhances my capabilities in data analysis.}
-
-%----------- SKILLS -----------
-
-\section{Skills}
-  \vspace{2pt}
-  \resumeSubHeadingListStart
-    \small{\item{
-        \textbf{Languages:}{ Python, SQL, R} \\ \vspace*{3pt}
-        \textbf{Python Libraries:}{ Pandas, NumPy, Sklearn, PyTorch, FastApi, Pytest, CatBoost, XGBoost, LightGBM, Streamlit} \\ \vspace*{3pt}
-        \textbf{DevOps and Workflow:}{ Linux, Git, Docker, GitLab CI/CD, Airflow, MLFlow, S3} \\ \vspace*{3pt}
-        \textbf{Web Analytics Tools::}{ Google Analytics, Yandex.Metrika, Google Tag Manager (GTM), HTML/CSS} \\ \vspace*{3pt}
-    }}
-  \resumeSubHeadingListEnd
-
-
+% { {{summary}} }
 
 %----------- EXPERIENCE -----------
-
 \section{Experience}
-  \vspace{3pt}
+\vspace{3pt}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Product Analyst}{Jun 2023 -- Present}
+      {Machine Learning Engineer}{Jun 2024 -- Present}
+      {Raiffeisenbank}{One of the top 10 most profitable banks in Russia}
+        \resumeItemListStart
+            \resumeItem{Designed and deployed 4 end-to-end batch prediction pipelines (LightGBM, Airflow, Evidently) for employee burnout classification, automating retraining, inference, and monitoring with drift detection. Transitioned system from research prototype to enterprise deployment, becoming an essential toolkit for 200+ managers company-wide;}
+            \resumeItem{Scaled internal service comment labeling 10x (200→2K/day) by engineering an async API pipeline (Chain-of-Thought + Structured Outputs), achieving 92\% accuracy;}
+            % \resumeItem{Mentored 2 data analysts in time series forecasting (SARIMA, Classical ML), enabling independent development and deployment of forecasting models, enhancing team capabilities;}
+            \resumeItem{Developed a hybrid RAG prototype (BM25 + BGE-M3) that automated 80\% of HR policy responses, reducing resolution time from hours to seconds;}
+            \resumeItem{Won 1st place in Raiffeisenbank's 2025 Hackathon by developing an AI-powered recuiter trainer featuring hybrid resume parsing (PDF parsing + Structured Output), candidate scoring using OpenAi SDK Agents, and personalized agent-based training simulations, reducing recruiter onboarding time;}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Data Analyst}{Jun 2023 -- Feb 2024}
       {VseInstrumenti.ru}{Leading DIY e-commerce company in the CIS}
         \resumeItemListStart
             \resumeItem{Run analytics for three core products in a large e-commerce platform with 12+ million MAU;}
             \resumeItem{Led a series of 40+ online A/B tests across three product teams from MDE analysis to modelling potential uplift effects (Stratification, Delta Method, Linearization, Bootstrap, and Bucketing),
             resulting in 30+ new features, contributing to a \$25K increase in monthly revenue;}
-            \resumeItem{Achieved an 80\% reduction in data analysis time for ad-hoc requests by implementing reusable ETL 
-            components using Python, Apache Airflow and Docker, which facilitated the creation of a Google Data Studio dashboard.
-            The dashboard showcased critical metrics including website performance, cohort analysis, shopping cart activity, 
-            order checkout methods and payment processes. This pipeline served as a reporting framework for the all product teams;}
-            \resumeItem{Build series of ML and SARIMAX time series forecasting models with 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
-            \resumeItem{Configured GTM to ensure precise data tracking and reporting;}
+            \resumeItem{Engineered reusable ETL components (Python, Apache Airflow, Docker) that reduced ad-hoc data analysis time by 80\%, created a core dashboard, and established a reporting framework for all product teams;}
+            \resumeItem{Build series of ML and SARIMAX time series forecasting models with average 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
         \resumeItemListEnd
-
     \resumeSubheading
     {Data Analyst}{Jan 2023 -- Jun 2023}
-    {Sportmaster}{Largest sports and outdoor retailer in Russia}
+    {Sportmaster}{The largest sports and outdoor retailer in Russia}
       \resumeItemListStart
           \resumeItem{Developed an time series forecasting model using statistical methods (SARIMA) to predict inventory losses in offline retail stores;}
-          \resumeItem{Implemented a Power BI dashboard using multiple data processing pipelines to visualize potential risks related to employee safety violations in distribution centers;}
-          \resumeItem{Developed a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. 
+          \resumeItem{Used a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. 
           This model utilized various factors such as employee demographics, working hours, job roles, and environmental conditions to predict the likelihood of accidents occurring;}
       \resumeItemListEnd
-    
   \resumeSubHeadingListEnd
 
 %----------- EDUCATION -----------
@@ -184,33 +133,43 @@ My skill set includes Machine Learning, which enhances my capabilities in data a
   \vspace{3pt}
   \resumeSubHeadingListStart
     \resumeSubheading
-    {Higher School of Economic}{Sep 2023 -- Present}
+    {Higher School of Economics (HSE University)}{Sep 2023 -- Jun 2025}
     {Master's degree in Machine Learning and High Load Systems}{}
+    \resumeItemListStart
+      \resumeItem{GPA: 8.29/10}
+      \resumeItem{Thesis: \textit{Agentic RAG-based Question-Answering System for Natural Language Queries over Structured Data}}
+    \resumeItemListEnd
+
     \resumeSubheading
     {Saint Petersburg State University of Civil Aviation}{Sep 2016 -- Jun 2021}
     {Bachelor's degree in Maintenance of Aircraft and Engines}{}
   \resumeSubHeadingListEnd
 
-
-%----------- PROJECTS -----------
-
-\section{Projects}
-    \vspace{3pt}
-    \resumeSubHeadingListStart
+% %----------- PROJECTS -----------
+% \section{Projects}
+%     \vspace{3pt}
+%     \resumeSubHeadingListStart
       
-      \resumeProjectHeading
-        {\textbf{Optimization of Expected Return from a Stock Portfolio} $|$ \emph{\href{https://github.com/alexander-tereshin/Portfolio_Optimisation}{\color{blue}GitHub}}}{}
-        \begin{multicols}{2}
-        \resumeItemListStart
-            \resumeItem{Developed parsers to extract financial data and news data;}
-            \resumeItem{Utilized PyTorch for generating news title embeddings;}
-            \resumeItem{Trained CatBoost model to predict expected return;}
-            \resumeItem{Developed FastAPI for the backend API;}
-            \resumeItem{Used the aiogram framework for building the Telegram bot interface;}
-            \resumeItem{Deployed the app using Docker;}
-          \resumeItemListEnd
-        \end{multicols}
-    \resumeSubHeadingListEnd
+%       \resumeProjectHeading
+%         {\textbf{S\&P 500 Portfolio Optimization Service} $|$ \emph{\href{https://github.com/alexander-tereshin/Portfolio_Optimisation}{\color{blue}GitHub}}}{}
+%         \resumeItemListStart
+%             \resumeItem{Developed a Dockerized stock prediction service using asynchronous scrapers, HF Sentence-Transformers for news sentiment analysis, and CatBoost for return forecasting, deployed via FastAPI with a Telegram bot for real-time rebalancing of stocks portfolio;}
+%           \resumeItemListEnd
+%     \resumeSubHeadingListEnd
 
+
+%----------- SKILLS -----------
+\section{Skills}
+\vspace{3pt}
+\resumeSubHeadingListStart
+  \small{\item{
+      \textbf{Languages:}{ Python, SQL, Bash, R, LaTeX} \\ \vspace*{3pt}
+      \textbf{NLP \& Deep Learning:}{ PyTorch, Transformers (Hugging Face), RAG, Agentic Workflows} \\ \vspace*{3pt}
+      \textbf{Classical ML:}{ Scikit-learn, XGBoost, LightGBM, CatBoost} \\ \vspace*{3pt}
+      \textbf{MLOps \& Infrastructure:}{ Kubernetes, Docker, FastAPI, Apache Airflow, MLFlow, Evidently, CI/CD} \\ \vspace*{3pt}
+      \textbf{Cloud \& Big Data:}{ AWS S3, Redis, PySpark, Hadoop} \\ \vspace*{3pt}
+      \textbf{Tools:}{ Git, Linux, asyncio, Pytest} \\
+  }}
+\resumeSubHeadingListEnd
 
 \end{document}
