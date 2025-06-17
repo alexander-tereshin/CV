@@ -1,21 +1,23 @@
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
+% ===== PACKAGES =====
 \usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{hyphenat}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
 \usepackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
+\usepackage{hyphenat}
+\usepackage{latexsym}
+\usepackage{marvosym}
 \usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{verbatim}
 \input{glyphtounicode}
 
+% ===== DOCUMENT SETTINGS =====
 \setlength{\footskip}{5pt}
 \pagestyle{fancy}
 \fancyhf{}
@@ -23,26 +25,30 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% ===== MARGINS =====
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
+% ===== FORMATTING =====
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\pdfgentounicode=1
 
+% ===== SECTION FORMATTING =====
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
 
+
+% ===== CUSTOM COMMANDS =====
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1}
-}}
+  \item\small{#1}
+}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-4pt}\item
@@ -70,7 +76,7 @@
 
 \begin{document}
 
-%---------- HEADING ----------
+% ===== HEADER =====
 \begin{center}
     \textbf{\Huge Alexander Tereshin} \\ \vspace{5pt}
     \textbf{\Large Machine Learning Engineer} \\ \vspace{5pt}
@@ -82,94 +88,66 @@
     \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/alex-tereshin}{alex-tereshin}
     $|$
     \faGithub \hspace{.5pt} \href{https://github.com/alexander-tereshin}{alexander-tereshin}
-    % $|$
-    % \faMapMarker \hspace{.5pt} Moscow, Russia
 \end{center}
 \vspace{-15pt}
 
-%----------- SUMMARY -----------
-
-% \vspace{-4pt}
-% \textit
-% { {{summary}} }
-
-%----------- EXPERIENCE -----------
+% ===== EXPERIENCE =====
 \section{Experience}
-\vspace{3pt}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Machine Learning Engineer}{Jun 2024 -- Present}
       {Raiffeisenbank}{One of the top 10 most profitable banks in Russia}
         \resumeItemListStart
-            \resumeItem{Designed and deployed 4 end-to-end batch prediction pipelines (LightGBM, Airflow, Evidently) for employee burnout classification, automating retraining, inference, and monitoring with drift detection. Transitioned system from research prototype to enterprise deployment, becoming an essential toolkit for 200+ managers company-wide;}
-            \resumeItem{Scaled internal service comment labeling 10x (200→2K/day) by engineering an async API pipeline (Chain-of-Thought + Structured Outputs), achieving 92\% accuracy;}
-            % \resumeItem{Mentored 2 data analysts in time series forecasting (SARIMA, Classical ML), enabling independent development and deployment of forecasting models, enhancing team capabilities;}
-            \resumeItem{Developed a hybrid RAG prototype (BM25 + BGE-M3) that automated 80\% of HR policy responses, reducing resolution time from hours to seconds;}
-            \resumeItem{Won 1st place in Raiffeisenbank's 2025 Hackathon by developing an AI-powered recuiter trainer featuring hybrid resume parsing (PDF parsing + Structured Output), candidate scoring using OpenAi SDK Agents, and personalized agent-based training simulations, reducing recruiter onboarding time;}
+          \resumeItem{Designed and deployed 4 end-to-end batch prediction pipelines (LightGBM, Airflow, Evidently) for employee burnout classification, automating retraining, inference, and monitoring with drift detection. Transitioned system from research prototype to enterprise deployment, becoming an essential toolkit for 200+ managers company-wide;}
+          \resumeItem{Scaled internal service comment labeling 10x (200→2K/day) by engineering an async API pipeline (Chain-of-Thought + Structured Outputs), achieving 92\% accuracy;}
+          % \resumeItem{Mentored 2 data analysts in time series forecasting (SARIMA, Classical ML), enabling independent development and deployment of forecasting models, enhancing team capabilities;}
+          \resumeItem{Developed a hybrid RAG prototype (BM25 + BGE-M3) that automated 80\% of HR policy responses, reducing resolution time from hours to seconds;}
+          \resumeItem{Won 1st place in Raiffeisenbank's 2025 Hackathon by developing an AI-powered recuiter trainer featuring hybrid resume parsing (PDF parsing + Structured Output), candidate scoring using OpenAi SDK Agents, and personalized agent-based training simulations, reducing recruiter onboarding time;}
         \resumeItemListEnd
     \resumeSubheading
       {Data Analyst}{Jun 2023 -- Feb 2024}
       {VseInstrumenti.ru}{Leading DIY e-commerce company in the CIS}
         \resumeItemListStart
-            \resumeItem{Run analytics for three core products in a large e-commerce platform with 12+ million MAU;}
-            \resumeItem{Led a series of 40+ online A/B tests across three product teams from MDE analysis to modelling potential uplift effects (Stratification, Delta Method, Linearization, Bootstrap, and Bucketing),
-            resulting in 30+ new features, contributing to a \$25K increase in monthly revenue;}
-            \resumeItem{Engineered reusable ETL components (Python, Apache Airflow, Docker) that reduced ad-hoc data analysis time by 80\%, created a core dashboard, and established a reporting framework for all product teams;}
-            \resumeItem{Build series of ML and SARIMAX time series forecasting models with average 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
+          \resumeItem{Run analytics for three core products in a large e-commerce platform with 12+ million MAU;}
+          \resumeItem{Led a series of 40+ online A/B tests across three product teams from MDE analysis to modelling potential uplift effects (Stratification, Delta Method, Linearization, Bootstrap, and Bucketing), resulting in 30+ new features, contributing to a \$25K increase in monthly revenue;}
+          \resumeItem{Engineered reusable ETL components (Python, Apache Airflow, Docker) that reduced ad-hoc data analysis time by 80\%, created a core dashboard, and established a reporting framework for all product teams;}
+          \resumeItem{Build series of ML and SARIMAX time series forecasting models with average 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
         \resumeItemListEnd
     \resumeSubheading
-    {Data Analyst}{Jan 2023 -- Jun 2023}
-    {Sportmaster}{The largest sports and outdoor retailer in Russia}
-      \resumeItemListStart
-          \resumeItem{Developed an time series forecasting model using statistical methods (SARIMA) to predict inventory losses in offline retail stores;}
-          \resumeItem{Used a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. 
-          This model utilized various factors such as employee demographics, working hours, job roles, and environmental conditions to predict the likelihood of accidents occurring;}
+      {Data Analyst}{Jan 2023 -- Jun 2023}
+      {Sportmaster}{The largest sports and outdoor retailer in Russia}
+        \resumeItemListStart
+        \resumeItem{Developed an time series forecasting model using statistical methods (SARIMA) to predict inventory losses in offline retail stores;}
+        \resumeItem{Used a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. This model utilized various factors such as employee demographics, working hours, job roles, and environmental conditions to predict the likelihood of accidents occurring;}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%----------- EDUCATION -----------
-
+% ===== EDUCATION =====
 \section{Education}
-  \vspace{3pt}
   \resumeSubHeadingListStart
     \resumeSubheading
     {Higher School of Economics (HSE University)}{Sep 2023 -- Jun 2025}
-    {Master's degree in Machine Learning and High Load Systems}{}
-    \resumeItemListStart
-      \resumeItem{GPA: 8.29/10}
-      \resumeItem{Thesis: \textit{Agentic RAG-based Question-Answering System for Natural Language Queries over Structured Data}}
-    \resumeItemListEnd
-
+      {Master's degree in Machine Learning and High Load Systems}{}
+      \resumeItemListStart
+        \resumeItem{GPA: 8.29/10}
+        \resumeItem{Thesis: \textit{Agentic RAG-based Question-Answering System for Natural Language Queries over Structured Data}}
+      \resumeItemListEnd
     \resumeSubheading
-    {Saint Petersburg State University of Civil Aviation}{Sep 2016 -- Jun 2021}
-    {Bachelor's degree in Maintenance of Aircraft and Engines}{}
+      {Saint Petersburg State University of Civil Aviation}{Sep 2016 -- Jun 2021}
+      {Bachelor's degree in Maintenance of Aircraft and Engines}{}
   \resumeSubHeadingListEnd
 
-% %----------- PROJECTS -----------
-% \section{Projects}
-%     \vspace{3pt}
-%     \resumeSubHeadingListStart
-      
-%       \resumeProjectHeading
-%         {\textbf{S\&P 500 Portfolio Optimization Service} $|$ \emph{\href{https://github.com/alexander-tereshin/Portfolio_Optimisation}{\color{blue}GitHub}}}{}
-%         \resumeItemListStart
-%             \resumeItem{Developed a Dockerized stock prediction service using asynchronous scrapers, HF Sentence-Transformers for news sentiment analysis, and CatBoost for return forecasting, deployed via FastAPI with a Telegram bot for real-time rebalancing of stocks portfolio;}
-%           \resumeItemListEnd
-%     \resumeSubHeadingListEnd
-
-
-%----------- SKILLS -----------
+% ===== SKILLS =====
 \section{Skills}
-\vspace{3pt}
-\resumeSubHeadingListStart
-  \small{\item{
+  \resumeSubHeadingListStart
+    \small{\item{
       \textbf{Languages:}{ Python, SQL, Bash, R, LaTeX} \\ \vspace*{3pt}
       \textbf{NLP \& Deep Learning:}{ PyTorch, Transformers (Hugging Face), RAG, Agentic Workflows} \\ \vspace*{3pt}
       \textbf{Classical ML:}{ Scikit-learn, XGBoost, LightGBM, CatBoost} \\ \vspace*{3pt}
       \textbf{MLOps \& Infrastructure:}{ Kubernetes, Docker, FastAPI, Apache Airflow, MLFlow, Evidently, CI/CD} \\ \vspace*{3pt}
       \textbf{Cloud \& Big Data:}{ AWS S3, Redis, PySpark, Hadoop} \\ \vspace*{3pt}
       \textbf{Tools:}{ Git, Linux, asyncio, Pytest} \\
-  }}
-\resumeSubHeadingListEnd
+    }}
+  \resumeSubHeadingListEnd
 
 \end{document}
