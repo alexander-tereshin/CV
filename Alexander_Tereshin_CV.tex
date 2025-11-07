@@ -6,7 +6,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage[hidelinks]{hyperref}
 \usepackage{hyphenat}
 \usepackage{latexsym}
@@ -80,72 +80,80 @@
     \textbf{\Huge Alexander Tereshin} \\ \vspace{5pt}
     \textbf{\Large Machine Learning Engineer} \\ \vspace{5pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:+995 591 319 552}{+995 591 319 552}
+    \faMobile* \hspace{.5pt} \href{tel:+995 591 319 552}{+995 591 319 552}
     $|$
     \faAt \hspace{.5pt} \href{mailto:alexandr.tereshin@outlook.com}{alexandr.tereshin@outlook.com}
     $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/alex-tereshin}{alex-tereshin}
+    \faLinkedin \hspace{.5pt} \href{https://www.linkedin.com/in/alex-tereshin}{alex-tereshin}
     $|$
     \faGithub \hspace{.5pt} \href{https://github.com/alexander-tereshin}{alexander-tereshin}
+    $|$
+    \faTelegram \hspace{.5pt} \href{https://t.me/tealandr}{tealandr}
 \end{center}
 \vspace{-15pt}
 
 % ===== EXPERIENCE =====
 \section{Experience}
   \resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Teaching and Research Assistant}{Sep 2025 -- Present}
+    {Higher School of Economics (HSE University)}{}
+      \resumeItemListStart
+      \resumeItem{Assist NLP course, responsible for grading practical assignments and exams covering the full modern NLP stack: from foundational models (\textbf{Transformers}, \textbf{BERT}) and semantic search (\textbf{vector databases}) to advanced LLM fine-tuning (\textbf{PEFT}, \textbf{TRL}) and optimization techniques (\textbf{quantization/GPTQ}).}
+      \resumeItemListEnd
+
     \resumeSubheading
       {Machine Learning Engineer}{Jun 2024 -- Present}
-      {Raiffeisenbank}{One of the top 10 most profitable banks in Russia}
+      {Raiffeisenbank}{}
         \resumeItemListStart
-          \resumeItem{Designed and deployed 4 end-to-end batch prediction pipelines (LightGBM, Airflow, Evidently) for employee burnout classification, automating retraining, inference, and monitoring with drift detection. Transitioned system from research prototype to enterprise deployment, becoming an essential toolkit for 200+ managers company-wide;}
-          \resumeItem{Scaled internal service comment labeling 10x (200→2K/day) by engineering an async API pipeline (Chain-of-Thought + Structured Outputs), achieving 92\% accuracy;}
-          % \resumeItem{Mentored 2 data analysts in time series forecasting (SARIMA, Classical ML), enabling independent development and deployment of forecasting models, enhancing team capabilities;}
-          \resumeItem{Developed a hybrid RAG prototype (BM25 + BGE-M3) that automated 80\% of HR policy responses, reducing resolution time from hours to seconds;}
-          \resumeItem{Won 1st place in Raiffeisenbank's 2025 Hackathon by developing an AI-powered recuiter trainer featuring hybrid resume parsing (PDF parsing + Structured Output), candidate scoring using OpenAi SDK Agents, and personalized agent-based training simulations, reducing recruiter onboarding time;}
+        \resumeItem{Engineered an asynchronous API pipeline implemeting \textbf{Litestar}, \textbf{FastStream}, and \textbf{RabbitMQ} to scale internal service comment labeling 10x (from 200 to 2K/day), leveraging \textbf{Few-Shot Prompting} and \textbf{Chain-of-Thought} with \textbf{Qwen3-32B} model and the \textbf{OpenAI Client} to achieve \textbf{92\% accuracy};}
+        \resumeItem{Developed a hybrid RAG system automating 80\% of HR queries by combining \textbf{BM25} and \textbf{BGE-M3} retrievers within a \textbf{Milvus} vector database, reducing response resolution time from hours to seconds;}
+        \resumeItem{Won 1st place in a company-wide hackathon by developing an AI HR platform that parsed resumes using \textbf{Docling} for PDF processing combined with \textbf{Structured Output (SO)}, and automated candidate scoring and personalized training simulations through agentic workflows powered by the \textbf{OpenAI SDK} and \textbf{Function Calling};}
+        \resumeItem{Designed and deployed 4 end-to-end batch prediction pipelines for employee burnout classification, which included feature engineering on data from \textbf{HDFS} using \textbf{PySpark}, orchestrating jobs with \textbf{Apache Airflow}, training a \textbf{LightGBM} core model that achieved an \textbf{81\% F1 score}, and implementing automated monitoring with \textbf{Evidently AI}; transitioned the system from a research prototype to a production tool for 200+ managers.}
         \resumeItemListEnd
+
     \resumeSubheading
       {Data Scientist}{Jun 2023 -- Feb 2024}
-      {VseInstrumenti.ru}{Leading DIY e-commerce company in the CIS}
-        \resumeItemListStart
-          \resumeItem{Run Data Science for three core products in a large e-commerce platform with 12+ million MAU;}
-          \resumeItem{Led a series of 40+ online A/B tests across three product teams from MDE analysis to modelling potential uplift effects (Stratification, Delta Method, Linearization, Bootstrap, and Bucketing), resulting in 30+ new features, contributing to a \$25K increase in monthly revenue;}
-          \resumeItem{Build series of ML and SARIMAX time series forecasting models with average 11\% MAPE max for key product metrics such as traffic analysis and B2B revenue;}
-          \resumeItem{Mentored 2 data analysts in time series forecasting (SARIMA, Classical ML), enabling independent development and deployment of forecasting models, enhancing team capabilities;}
-        \resumeItemListEnd
+      {VseInstrumenti.ru}{}
+    \resumeItemListStart
+      \resumeItem{Run Data Science for three core products on a 12M+ MAU platform to measure and optimize product impact, executing 40+ online A/B tests with advanced variance reduction techniques (\textbf{Stratification, Delta Method}) to drive a \$25K monthly revenue increase, and applying quasi-experimental methods like \textbf{Propensity Score Matching} to estimate the effect of BNPL offers;}
+      \resumeItem{Developed and deployed forecasting models using both statistical (\textbf{SARIMAX}) and gradient boosting (\textbf{CatBoost}) methods to predict key business metrics, achieving an average \textbf{11\% MAPE}. Also mentored 2 data analysts in the end-to-end Time Series Forecasting process.}
+    \resumeItemListEnd
+
     \resumeSubheading
       {Data Scientist}{Jan 2023 -- Jun 2023}
-      {Sportmaster}{The largest sports and outdoor retailer in Russia}
-        \resumeItemListStart
-        \resumeItem{Developed an time series forecasting model using statistical methods (SARIMA) to predict inventory losses in offline retail stores;}
-        \resumeItem{Used a logistic regression model to gain insights into workplace injuries within the retailer's warehouses. This model utilized various factors such as employee demographics, working hours, job roles, and environmental conditions to predict the likelihood of accidents occurring;}
+      {Sportmaster}{}
+      \resumeItemListStart
+      \resumeItem{Applied \textbf{Logistic Regression} model to research the main drivers of workplace safety incidents, delivering insights that guided risk reduction strategies. Developed a \textbf{SARIMA} time series model for inventory loss forecasting.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 % ===== EDUCATION =====
 \section{Education}
   \resumeSubHeadingListStart
+
     \resumeSubheading
     {Higher School of Economics (HSE University)}{Sep 2023 -- Jun 2025}
-      {Master's degree in Machine Learning and High Load Systems}{}
-      \resumeItemListStart
-        \resumeItem{GPA: 8.29/10}
-        \resumeItem{Thesis: \textit{Agentic RAG-based Question-Answering System for Natural Language Queries over Structured Data}}
-      \resumeItemListEnd
+      {Master's degree in Machine Learning and High Load Systems}{GPA: 8.29/10}
+      % \resumeItemListStart
+      %   \resumeItem{Thesis: \textit{Agentic RAG-based QA System for Natural Language Queries over Structured Data}}
+      % \resumeItemListEnd
     \resumeSubheading
       {Saint Petersburg State University of Civil Aviation}{Sep 2016 -- Jun 2021}
       {Bachelor's degree in Maintenance of Aircraft and Engines}{}
+
   \resumeSubHeadingListEnd
 
 % ===== SKILLS =====
 \section{Skills}
   \resumeSubHeadingListStart
     \small{\item{
-      \textbf{Programming \& Tools:}{ Python, SQL, Bash, R, LaTeX, Git, Linux, Pytest} \\ \vspace*{3pt}
-      \textbf{LLM \& AI Stack:}{ PyTorch, Transformers (Hugging Face), RAG, Agentic Workflows, MLFlow} \\ \vspace*{3pt}
-      \textbf{Backend \& APIs:}{ FastAPI, Litestar, Redis, Kafka} \\ \vspace*{3pt}
-      \textbf{Data \& Cloud:}{ PySpark, Hadoop, Hive, AWS S3} \\ \vspace*{3pt}
-      \textbf{MLOps \& Infrastructure:}{ Kubernetes, Apache Airflow, CI/CD} \\
-      % \textbf{Tools:}{ Git, Linux, asyncio, Pytest} \\
+        \textbf{Programming \& ML:}{ Python, PyTorch, Transformers, RAG, Agentic Workflows, Vector Databases (Milvus)} \\ \vspace*{3pt}
+        \textbf{MLOps \& Orchestration:}{ Apache Airflow, Kubernetes, Docker, CI/CD, MLFlow} \\ \vspace*{3pt}
+        \textbf{Data \& Databases:}{ PySpark, SQL, Hadoop, Hive, MongoDB, AWS S3} \\ \vspace*{3pt}
+        \textbf{Backend \& Tools:}{ FastAPI, Litestar, Kafka, RabbitMQ, Redis, Bash, Linux, Git, Pytest, R, LaTeX} \\ \vspace*{3pt}
+        \textbf{Languages:}{ English (B2), Russian (Native)} \\
     }}
   \resumeSubHeadingListEnd
 
