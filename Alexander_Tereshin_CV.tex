@@ -41,7 +41,7 @@
 
 % ===== SECTION FORMATTING =====
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-5pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
 
 
@@ -51,18 +51,11 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-4pt}\item
+  \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \normalfont{#2} \\[1pt]
       \normalfont{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{1pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -90,43 +83,52 @@
     $|$
     \faTelegram \hspace{.5pt} \href{https://t.me/tealandr}{tealandr}
 \end{center}
-\vspace{-15pt}
+
+% ===== ABOUT SECTION =====
+\vspace{-2pt}
+\small{
+  Machine Learning Engineer specializing in \textbf{NLP}, \textbf{LLMs}, \textbf{Agentic Workflows}, and \textbf{RAG architectures}. Architected high-throughput inference pipelines and production AI systems in fintech and e-commerce. Combines deep NLP theory with robust \textbf{MLOps} engineering practices to build scalable, reliable AI solutions.
+}
+\vspace{-4pt}
 
 % ===== EXPERIENCE =====
 \section{Experience}
   \resumeSubHeadingListStart
 
-  \resumeSubheading
-    {Teaching and Research Assistant}{Sep 2025 -- Present}
-    {Higher School of Economics (HSE University)}{}
+    \resumeSubheading
+      {Teaching and Research Assistant}{Sep 2025 -- Present}
+      {Higher School of Economics (HSE University)}{}
       \resumeItemListStart
-      \resumeItem{Assist NLP course, responsible for grading practical assignments and exams covering the full modern NLP stack: from foundational models (\textbf{Transformers}, \textbf{BERT}) and semantic search (\textbf{vector databases}) to advanced LLM fine-tuning (\textbf{PEFT}, \textbf{TRL}) and optimization techniques (\textbf{quantization/GPTQ}).}
+        \resumeItem{Mentor graduate students across \textbf{Basic and Advanced NLP} courses, responsible for curriculum design, grading practical assignments, and giving exams ranging from foundational \textbf{Transformers} to \textbf{Multi-Agent Systems}.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Machine Learning Engineer}{Jun 2024 -- Present}
       {Raiffeisenbank}{}
-        \resumeItemListStart
-        \resumeItem{Engineered an asynchronous API pipeline implemeting \textbf{Litestar}, \textbf{FastStream}, and \textbf{RabbitMQ} to scale internal service comment labeling 10x (from 200 to 2K/day), leveraging \textbf{Few-Shot Prompting} and \textbf{Chain-of-Thought} with \textbf{Qwen3-32B} model and the \textbf{OpenAI Client} to achieve \textbf{92\% accuracy};}
-        \resumeItem{Developed a hybrid RAG system automating 80\% of HR queries by combining \textbf{BM25} and \textbf{BGE-M3} retrievers within a \textbf{Milvus} vector database, reducing response resolution time from hours to seconds;}
-        \resumeItem{Won 1st place in a company-wide hackathon by developing an AI HR platform that parsed resumes using \textbf{Docling} for PDF processing combined with \textbf{Structured Output (SO)}, and automated candidate scoring and personalized training simulations through agentic workflows powered by the \textbf{OpenAI SDK} and \textbf{Function Calling};}
-        \resumeItem{Designed and deployed 4 end-to-end batch prediction pipelines for employee burnout classification, which included feature engineering on data from \textbf{HDFS} using \textbf{PySpark}, orchestrating jobs with \textbf{Apache Airflow}, training a \textbf{LightGBM} core model that achieved an \textbf{81\% F1 score}, and implementing automated monitoring with \textbf{Evidently AI}; transitioned the system from a research prototype to a production tool for 200+ managers.}
+      \resumeItemListStart
+        \resumeItem{Developing a corporate \textbf{Agentic AI Platform} leveraging \textbf{Qwen-2.5-Coder} for autonomous code generation within isolated Micro Sandboxes. Deployed \textbf{FastMCP} servers for Agentic RAG and implemented a \textbf{Zero-Touch QA agent}, using the \textbf{Ragas} framework for evaluation;}
+        \resumeItem{Engineered async internal data labeling pipeline \textbf{(Litestar, FastStream, RabbitMQ)} scaling throughput \textbf{10x} (to 2K/day) with \textbf{92\% accuracy} via \textbf{Qwen2.5 Few-Shot CoT};}
+        \resumeItem{Designed and deployed 4 production batch pipelines, orchestrating \textbf{PySpark} jobs on \textbf{HDFS} via \textbf{Airflow} to inference a \textbf{LightGBM} model (\textbf{81\% F1}). Integrated full-stack observability and drift monitoring using \textbf{Evidently AI}, \textbf{Prometheus}, and \textbf{Grafana};}
+        \resumeItem{Developed a Hybrid RAG system (\textbf{Milvus, BM25 + BGE-M3}) automating 80\% of basic HR policy responses, reducing query resolution time by 99\% (hours to seconds) with \textbf{~ 80 ms retrieval latency};}
+        \resumeItem{Won \textbf{1st Place} in company-wide hackathon engineering an agentic recruitment platform for candidate scoring and simulations via \textbf{OpenAI Function Calling}, utilizing \textbf{Docling} + \textbf{Structured Output} for resume parsing.}
         \resumeItemListEnd
 
     \resumeSubheading
       {Data Scientist}{Jun 2023 -- Feb 2024}
       {VseInstrumenti.ru}{}
-    \resumeItemListStart
-      \resumeItem{Run Data Science for three core products on a 12M+ MAU platform to measure and optimize product impact, executing 40+ online A/B tests with advanced variance reduction techniques (\textbf{Stratification, Delta Method}) to drive a \$25K monthly revenue increase, and applying quasi-experimental methods like \textbf{Propensity Score Matching} to estimate the effect of BNPL offers;}
-      \resumeItem{Developed and deployed forecasting models using both statistical (\textbf{SARIMAX}) and gradient boosting (\textbf{CatBoost}) methods to predict key business metrics, achieving an average \textbf{11\% MAPE}. Also mentored 2 data analysts in the end-to-end Time Series Forecasting process.}
-    \resumeItemListEnd
+      \resumeItemListStart
+        \resumeItem{Run Data Science for three core products on a \textbf{12M+ MAU} platform, executing \textbf{40+ online A/B tests} using advanced variance reduction (\textbf{Stratification, Delta Method}), directly driving a \textbf{\$25K} monthly revenue increase;}
+        \resumeItem{Engineered reusable ETL components (\textbf{Python, Airflow, Docker}) reducing ad-hoc data analysis time by \textbf{80\%}. Established a reporting framework for all product teams;}
+        \resumeItem{Developed and deployed time series forecasting models (\textbf{SARIMAX, CatBoost}), achieving an average \textbf{11\% MAPE}. Mentored junior data analysts on the end-to-end Time Series Forecasting pipeline;}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Data Scientist}{Jan 2023 -- Jun 2023}
       {Sportmaster}{}
       \resumeItemListStart
-      \resumeItem{Applied \textbf{Logistic Regression} model to research the main drivers of workplace safety incidents, delivering insights that guided risk reduction strategies. Developed a \textbf{SARIMA} time series model for inventory loss forecasting.}
+        \resumeItem{Engineered a production-ready ML classification pipeline (\textbf{Postgres}, \textbf{Pandas}, \textbf{scikit-learn}), automating the identification of high-risk warehouse safety patterns and improving proactive risk mitigation.}
       \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 % ===== EDUCATION =====
@@ -149,10 +151,10 @@
 \section{Skills}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Programming \& ML:}{ Python, PyTorch, Transformers, RAG, Agentic Workflows, Vector Databases (Milvus)} \\ \vspace*{3pt}
-        \textbf{MLOps \& Orchestration:}{ Apache Airflow, Kubernetes, Docker, CI/CD, MLFlow} \\ \vspace*{3pt}
-        \textbf{Data \& Databases:}{ PySpark, SQL, Hadoop, Hive, MongoDB, AWS S3} \\ \vspace*{3pt}
-        \textbf{Backend \& Tools:}{ FastAPI, Litestar, Kafka, RabbitMQ, Redis, Bash, Linux, Git, Pytest, R, LaTeX} \\ \vspace*{3pt}
+        \textbf{Programming \& ML:}{ Python, PyTorch, Transformers, RAG, Agentic Workflows, LangChain, Vector Databases} \\ \vspace*{3pt}
+        \textbf{MLOps \& Orchestration:}{ Apache Airflow, Kubernetes, Docker, CI/CD, MLFlow } \\ \vspace*{3pt}
+        \textbf{Data \& Databases:}{ PySpark, SQL, Hadoop, Hive, MongoDB, AWS S3 } \\ \vspace*{3pt}
+        \textbf{Backend \& Tools:}{ FastAPI, Litestar, Kafka, RabbitMQ, Redis, Bash, Linux, Git, Pytest, R, LaTeX } \\ \vspace*{3pt}
         \textbf{Languages:}{ English (B2), Russian (Native)} \\
     }}
   \resumeSubHeadingListEnd
