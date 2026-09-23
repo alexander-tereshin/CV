@@ -90,7 +90,7 @@
 % ===== ABOUT SECTION =====
 \vspace{-2pt}
 \small {
-AI Research Engineer building \textbf{agentic systems} that hold up in production. Architected a corporate \textbf{multi-agent AI platform} at a major bank, where autonomous agents generated product hypotheses with \textbf{67\% accepted} by product teams; now developing \textbf{agentic VLM-based RAG} that outperforms published SOTA baselines on financial-document QA. Grounded in \textbf{classical ML} and \textbf{NLP}: forecasting, production classification pipelines, and large-scale A/B experimentation in e-commerce.
+AI Research Engineer building \textbf{agentic systems} that hold up in production. Architected a corporate \textbf{multi-agent AI platform} at a major bank, where autonomous agents generated product hypotheses with a \textbf{67\% acceptance rate} from product teams; now developing \textbf{agentic VLM-based RAG} that outperforms published SOTA baselines on financial-document QA. Background in \textbf{classical ML} and \textbf{NLP}: forecasting, classification pipelines, and large-scale A/B experimentation in e-commerce.
 }
 \vspace{-4pt}
 
@@ -117,23 +117,27 @@ AI Research Engineer building \textbf{agentic systems} that hold up in productio
       {Machine Learning Engineer}{Jun 2024 -- May 2026}
       {Raiffeisenbank}{}
 \resumeItemListStart
-        \resumeItem{Architected and delivered a corporate \textbf{multi-agent AI platform} where autonomous agents explore user data to \textbf{generate product hypotheses}, with \textbf{67\% accepted by product teams} for further testing. Equipped agents with an \textbf{Agentic RAG} tool (\textbf{FastMCP}) for banking-domain context and a \textbf{Zero-Touch QA agent} (\textbf{Ragas}) for automated evaluation, served by an internal \textbf{vLLM} stack --- \textbf{GLM} for agent reasoning and \textbf{Qwen-2.5-Coder} for code generation -- in isolated Micro Sandboxes;}
+        \resumeItem{Architected and delivered a corporate \textbf{multi-agent AI platform} where autonomous agents explore user data to \textbf{generate product hypotheses}, achieving a \textbf{67\% acceptance rate} from product teams for further testing. Equipped agents with an \textbf{Agentic RAG} tool (\textbf{FastMCP}) for banking-domain context and a \textbf{Zero-Touch QA agent} (\textbf{Ragas}) for automated evaluation, served by an internal \textbf{vLLM} stack (\textbf{GLM} for agent reasoning, \textbf{Qwen-2.5-Coder} for code generation) in isolated Micro Sandboxes;}
         
-        \resumeItem{Engineered an async \textbf{large-scale} data labeling and experimentation pipeline \textbf{(Litestar, FastStream, RabbitMQ)}, scaling throughput \textbf{10x} (to \textbf{2K labels/day}) at \textbf{92\% accuracy} via \textbf{Qwen2.5 Few-Shot CoT};}
+        \resumeItem{\textbf{Scaled data labeling throughput 10x} (to \textbf{2,000 labels/day}) at \textbf{92\% accuracy} by engineering an async system \textbf{(Litestar, FastStream, RabbitMQ)} driven by \textbf{Qwen2.5 Few-Shot CoT};}
         
-        \resumeItem{Designed and deployed 4 production batch pipelines, orchestrating \textbf{PySpark} jobs on \textbf{HDFS} via \textbf{Airflow} to serve a \textbf{LightGBM} model (\textbf{81\% F1}); built full-stack observability and drift monitoring \textbf{(Evidently AI, Prometheus, Grafana)} to detect signal degradation and non-stationary behavior in production;}
+        \resumeItem{
+Designed and deployed 4 production batch pipelines (\textbf{PySpark}, \textbf{HDFS}, \textbf{Airflow}) for a \textbf{LightGBM} model (\textbf{81\%~F1}), implementing full-stack observability \textbf{(Evidently AI, Prometheus, Grafana)} to monitor data drift and model degradation;}
+
+
         
-        \resumeItem{Built a Hybrid RAG system \textbf{(Milvus, BM25 + BGE-M3)} automating \textbf{80\%} of basic HR policy responses, cutting resolution time by \textbf{99\%} (hours to seconds) at \textbf{80 ms retrieval latency}.}
+        \resumeItem{\textbf{Cut HR policy query resolution time by 99\%} (hours to seconds) with a Hybrid RAG system \textbf{(Milvus, BM25 + BGE-M3)} automating \textbf{80\%} of basic responses at \textbf{80 ms p95 retrieval latency}.}
         % \resumeItem{Won \textbf{1st Place} in company-wide hackathon engineering an agentic recruitment platform for candidate scoring and simulations via \textbf{OpenAI Function Calling}, utilizing \textbf{Docling} + \textbf{Structured Output} for resume parsing.}
         \resumeItemListEnd
 
-    \resumeSubheading
-      {Data Scientist --- Retail \& E-commerce}{Jan 2023 -- Jun 2024}
-      {Sportmaster (Jan--Jun 2023) $\cdot$ VseInstrumenti.ru (Jun 2023 -- Feb 2024) $\cdot$ Leroy Merlin (Feb--Jun 2024)}{}
-      \resumeItemListStart
-        \resumeItem{Led Data Science for three core products on a \textbf{12M+ MAU} platform (VseInstrumenti.ru), running \textbf{40+ online A/B experiments} with advanced variance reduction (\textbf{Stratification, Delta Method}) for robust statistical inference, directly driving a \textbf{\$25K} monthly revenue increase;}
-        \resumeItem{Built churn forecasting with \textbf{SARIMA} and interpreted a \textbf{CatBoost} model via \textbf{SHAP} to surface churn drivers and retention insights for sales and product teams; delivered a production ML classification pipeline for warehouse safety-risk detection.}
-      \resumeItemListEnd
+\resumeSubheading
+  {Data Scientist --- Retail \& E-commerce}{Jan 2023 -- Jun 2024}
+  {\rlap{Sportmaster (Jan--Jun 2023) $\cdot$ VseInstrumenti.ru (Jun 2023 -- Feb 2024) $\cdot$ Leroy Merlin (Feb--Jun 2024)}}{}
+  \resumeItemListStart
+    \resumeItem{\textbf{VseInstrumenti.ru:} Led Data Science for three core products on a \textbf{12M+ MAU} platform; ran \textbf{40+ online A/B experiments} with advanced variance reduction (\textbf{Stratification, Delta Method}), directly driving a \textbf{\$25K} monthly revenue increase;}
+    \resumeItem{\textbf{Leroy Merlin:} Built churn forecasting with \textbf{SARIMA} and interpreted a \textbf{CatBoost} model via \textbf{SHAP} to surface churn drivers and retention insights for sales and product teams;}
+    \resumeItem{\textbf{Sportmaster:} Built a production ML classification pipeline for automated warehouse safety-risk detection.}
+  \resumeItemListEnd
       
    \resumeSubheading
      {Career Transition into Machine Learning}{Feb 2022 -- Jan 2023}
@@ -188,7 +192,7 @@ AI Research Engineer building \textbf{agentic systems} that hold up in productio
 
         \textbf{Backend \& Tools:}{ FastAPI, Litestar, Kafka, RabbitMQ, Redis, Bash, Linux, Git, Pytest} \\ \vspace*{1pt}
 
-        \textbf{Languages:}{ English (B2), Russian (Native)} \\
+        \textbf{Languages:}{ English (B2 --- Professional Working Proficiency), Russian (Native)} \\
     }}
   \resumeSubHeadingListEnd
 \end{document}
